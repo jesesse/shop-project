@@ -40,5 +40,13 @@
         "category": "Jewelery",
         "price": "200€",
         "img": "https://ae01.alicdn.com/kf/Sdda4d4ed4f8645919038306eb6588486v/Stainless-Steel-Abracadabra-Pendant-Abraxas-Cabalistic-Magic-Occult-Esoteric-Amulet-Gold-Plated-Necklace.jpg_Q90.jpg_.webp"
+    },
+    {
+        "id": "7",
+        "name": "Silver Pentagram Earring",
+        "category": "Jewelery",
+        "price": "100€",
+        "img": "https://as2.ftcdn.net/v2/jpg/03/36/99/07/1000_F_336990739_kTVnrWbueaubccbKyggT3H7gHiSwNO7x.jpg"
     }
 ]
+

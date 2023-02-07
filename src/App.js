@@ -14,12 +14,11 @@ function App() {
   const [cartProducts, setCartProducts] = React.useState([]);
   const [cartItemCount, setCartItemCount] = React.useState(0);
 
-
   React.useEffect(() => {
     fetchProducts();
   }, [])
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     let newCount = cartProducts.reduce((total, product) => total + product.quantity, 0)
     setCartItemCount(newCount)
   }, [cartProducts])
@@ -65,7 +64,7 @@ function App() {
     let newQuantity = parseInt(e.target.value);
     if (isNaN(newQuantity)) return;
     if (newQuantity > 9) newQuantity = 10
-   
+
     setCartProducts(prevCartProducts => prevCartProducts.map(product => {
       if (product.id === id) {
         product = {
@@ -88,7 +87,6 @@ function App() {
         }
       } return product;
     }))
-
   }
 
   function decrement(id) {

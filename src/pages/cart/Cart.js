@@ -24,7 +24,7 @@ function Cart(props) {
     })
 
     let totalSum = props.cartProducts.reduce((total, product) => {
-        return total + parseInt(product.price.slice(0, -1))
+        return total + (parseInt(product.price.slice(0, -1)) * product.quantity)
     }, 0)
 
     return (
