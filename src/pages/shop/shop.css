@@ -1,0 +1,7 @@
+.shop-page{
+    padding-top: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}

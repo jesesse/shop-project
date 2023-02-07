@@ -1,0 +1,36 @@
+.shopping-cart--section{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shopping-cart--container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    position: relative;
+    
+}
+
+.shopping-cart-img{
+    width: 100%;
+    filter: invert(100%);
+}
+
+.shopping-cart-counter{
+    font-size: x-large;
+    position: absolute;
+    right: -8%;
+    top: -8%;
+    padding: 15px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}

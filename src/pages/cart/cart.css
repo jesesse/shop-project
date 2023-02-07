@@ -1,0 +1,22 @@
+.cart-page{
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart-products-grid{
+    flex: 2;
+    display: grid;
+    grid-template-columns: 300px;
+    gap: 50px;
+    padding: 50px;
+    background-color: rgb(47, 30, 54);
+    margin: 50px;
+}
+
+.check-out-section{
+    margin: 50px;
+    flex: 1;
+    background-color: rgb(47, 30, 54);
+    padding: 50px;
+}

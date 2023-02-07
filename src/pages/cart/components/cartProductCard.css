@@ -1,0 +1,16 @@
+.cart-product-card{
+    padding: 20px;
+    background-color: rgb(240, 248, 255);
+}
+
+input{
+    width: 50px;
+}
+
+button{
+    margin: 0 10px
+}
+
+.cart-product-card--img{
+    width: 100%;
+}

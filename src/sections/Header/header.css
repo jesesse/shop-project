@@ -1,0 +1,23 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(47, 37, 57);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+
+

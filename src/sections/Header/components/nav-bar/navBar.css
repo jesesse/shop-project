@@ -1,0 +1,11 @@
+.nav-bar {
+    flex: 1;
+    justify-content: center;
+    font-size: x-large;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-bar-link:visited {
+    color: aliceblue;
+}

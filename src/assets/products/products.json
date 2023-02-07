@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Real Human Skull",
+        "category": "Artifacts",
+        "price": "150€",
+        "img": "https://www.humanskullreplica.com/resize/e/400/400/files/stare-foto/lebky/sargas/8l.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Fake Human Skull",
+        "category": "Artifacts",
+        "price": "90€",
+        "img": "https://cdn.shopify.com/s/files/1/0024/7162/4762/products/PropSkull_600x.png?v=1637331135"
+    },
+    {
+        "id": "3",
+        "name": "Occult paintings",
+        "category": "Paintings",
+        "price": "70€",
+        "img": "https://a.1stdibscdn.com/archivesE/upload/a_4473/1474200256574/EF_XVIIIe_153_master.jpg?width=240"
+    },
+    {
+        "id": "4",
+        "name": "Esoteric paintings",
+        "category": "Paintings",
+        "price": "50€",
+        "img": "https://img.artrabbit.com/network/features/2018-april/friday-the-13th-art-and-the-occult/image/images/vxR5OuAgasox/653x920/0,0/1120x1576/800px-GOYA-El-aquelarre-Museo-La-zaro-Galdiano-Madrid-1797-98-1.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Moose Jaw Bone",
+        "category": "Artifacts",
+        "price": "100€",
+        "img": "https://i.etsystatic.com/24896120/r/il/b2e619/4321751150/il_fullxfull.4321751150_gt03.jpg"
+    },
+    {
+        "id": "6",
+        "name": "Golden neckalce",
+        "category": "Jewelery",
+        "price": "200€",
+        "img": "https://ae01.alicdn.com/kf/Sdda4d4ed4f8645919038306eb6588486v/Stainless-Steel-Abracadabra-Pendant-Abraxas-Cabalistic-Magic-Occult-Esoteric-Amulet-Gold-Plated-Necklace.jpg_Q90.jpg_.webp"
+    }
+]
