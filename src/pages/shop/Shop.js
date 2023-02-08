@@ -9,7 +9,10 @@ function Shop(props) {
         <div className="page-container">
             <Header itemCount={props.itemCount} />
             <div className="shop-page">
-                <Products products={props.products} addCartItems={props.addCartItems}/>
+                <Products 
+                    products={props.products} 
+                    addItemToCart={props.addItemToCart} 
+                    showProduct={props.showProduct}/>
             </div>
         </div>
     )

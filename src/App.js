@@ -5,6 +5,7 @@ import Cart from "./pages/cart/Cart";
 import Home from "./pages/home/Home";
 import Shop from "./pages/shop/Shop";
 import Contact from "./pages/contact/Contact";
+import ProductDisplay from "./pages/productDisplay/ProductDisplay";
 
 //ADD ITEM TO CART
 
@@ -14,12 +15,13 @@ function App() {
   const [cartProducts, setCartProducts] = React.useState([]);
   const [cartItemCount, setCartItemCount] = React.useState(0);
 
+
   React.useEffect(() => {
     fetchProducts();
   }, [])
 
   React.useEffect(() => {
-    let newCount = cartProducts.reduce((total, product) => total + product.quantity, 0)
+    let newCount = cartProducts.reduce((total, product) => total + product.quantity, 0);
     setCartItemCount(newCount)
   }, [cartProducts])
 
@@ -28,7 +30,7 @@ function App() {
     setProducts(response.default)
   }
 
-  function addCartItems(id, amount) {
+  function addItemToCart(id, amount) {
     setCartProducts(prevCartProducts => {
       /* 
       If shopping cart already holds the added item, only update the
@@ -47,7 +49,7 @@ function App() {
         return newCartProducts;
         /* 
         Else if shopping cart does NOT hold the item, just add the item
-        (with the new quantity property) to the shopping cart
+        (*amount* as the new quantity property) to the shopping cart
         */
       } else {
         let addedProduct = products.find(product => product.id === id)
@@ -60,6 +62,10 @@ function App() {
     })
   }
 
+  /*
+  Function to run, when user changes the amount of shopping cart product directly 
+  to the input field of that product, in the Cart page.
+  */
   function handleCartItemQuantityChange(e, id) {
     let newQuantity = parseInt(e.target.value);
     if (isNaN(newQuantity)) return;
@@ -75,7 +81,7 @@ function App() {
     }))
   }
 
-  function increment(id) {
+  function incrementCartItem(id) {
     const product = cartProducts.find(product => product.id === id);
     if (product.quantity > 9) return;
     setCartProducts(prevCartProducts => prevCartProducts.map(product => {
@@ -89,7 +95,7 @@ function App() {
     }))
   }
 
-  function decrement(id) {
+  function decrementCartItem(id) {
     const product = cartProducts.find(product => product.id === id);
     if (product.quantity < 2) return;
     setCartProducts(prevCartProducts => prevCartProducts.map(product => {
@@ -108,6 +114,7 @@ function App() {
     setCartProducts(prevCartProducts => prevCartProducts.filter(product => product.id !== id))
   }
 
+
   return (
     <BrowserRouter>
       <Routes>
@@ -118,7 +125,7 @@ function App() {
           {<Shop
             products={products}
             itemCount={cartItemCount}
-            addCartItems={addCartItems}>
+            addItemToCart={addItemToCart}>
           </Shop>}>
         </Route>
         <Route path="/contact" element=
@@ -130,9 +137,16 @@ function App() {
             cartProducts={cartProducts}
             deleteCartItem={deleteCartItem}
             handleChange={handleCartItemQuantityChange}
-            increment={increment}
-            decrement={decrement}>
+            incrementCartItem={incrementCartItem}
+            decrementCartItem={decrementCartItem}>
           </Cart>}>
+        </Route>
+        <Route path="/product/:id" element=
+          {<ProductDisplay
+            products={products}
+            itemCount={cartItemCount}
+            addItemToCart={addItemToCart}>
+          </ProductDisplay>}>
         </Route>
       </Routes>
     </BrowserRouter >

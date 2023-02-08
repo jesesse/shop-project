@@ -16,9 +16,8 @@ function Cart(props) {
                 quantity={product.quantity}
                 deleteCartItem={props.deleteCartItem}
                 handleChange={props.handleChange}
-                increment={props.increment}
-                decrement={props.decrement}>
-                    
+                incrementCartItem={props.incrementCartItem}
+                decrementCartItem={props.decrementCartItem}>
             </CartProductCard>
         )
     })

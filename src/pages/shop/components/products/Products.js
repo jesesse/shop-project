@@ -24,7 +24,8 @@ function Products(props) {
                                         name={product.name}
                                         price={product.price}
                                         img={product.img}
-                                        addCartItems={props.addCartItems}
+                                        addItemToCart={props.addItemToCart}
+                                        showProduct={props.showProduct}
                                     ></ProductCard>
                                 )
                             })}

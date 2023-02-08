@@ -1,40 +1,44 @@
 import React from "react";
 import './productCard.css'
+import { Link } from 'react-router-dom';
 
 function ProductCard(props) {
 
-    const[amount, setQuantity] = React.useState(1)
+    const [quantity, setQuantity] = React.useState(1)
 
-    function increment(){
-        if(amount > 9) return;
+    function incrementItem() {
+        if (quantity > 9) return;
         setQuantity(prev => parseInt(prev) + 1)
     }
 
-    function decrement(){
-        if(amount === 1) return;
+    function decrementItem() {
+        if (quantity === 1) return;
         setQuantity(prev => parseInt(prev) - 1)
     }
 
-    function handleChange(e){
+    function handleChange(e) {
         let value = e.target.value
-        if(isNaN(value)) return;
-        if(value > 9) value = 10
+        if (isNaN(value)) value = 1;
+        if (value > 9) value = 10
         setQuantity(parseInt(value))
     }
 
     return (
         <div className="product-card">
-            <img className="product-card--image" src={props.img} alt={props.name}/>
+            <Link to={`/product/${props.id}`}>
+                <img className="product-card--image" src={props.img} alt={props.name} />
+            </Link>
             <div className="product-card--info">
                 <p className="product-name">{props.name}</p>
+                <p className="product-description">{props.description}</p>
                 <p className="product-price">{props.price}</p>
             </div>
             <div className="wrapper">
-                <button onClick={decrement}>-</button>
-                <input value={amount} onChange={(e) => handleChange(e)}></input>
-                <button onClick={increment}>+</button>
+                <button onClick={decrementItem}>-</button>
+                <input value={quantity} onChange={(e) => handleChange(e)}></input>
+                <button onClick={incrementItem}>+</button>
             </div>
-            <button onClick={() => props.addCartItems(props.id, amount)}>ADD TO SHOPPING CART</button>
+            <button className="add-to-cart-btn" onClick={() => props.addItemToCart(props.id, quantity)}>ADD TO SHOPPING CART</button>
         </div>
 
     )

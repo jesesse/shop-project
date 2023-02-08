@@ -1,0 +1,22 @@
+.home-container{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.home-hero{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+    background-color: rgba(112, 91, 111, 0.414);
+    width: 50%;
+}
+
+.enter-shop{
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+}
